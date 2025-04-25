@@ -45,8 +45,8 @@ int main() {
         }
 
         printf("Result of the operation = %.2lf\n", result);
-        printf("Develoved by Adesh Gurung.");
-        printf("Email:adeshawm11@gmail.com");
+        printf("Develoved by Adesh Gurung.\n");
+        printf("Email:adeshawm11@gmail.com\n");
     }
     return 0;
 }
