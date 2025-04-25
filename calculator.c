@@ -45,6 +45,8 @@ int main() {
         }
 
         printf("Result of the operation = %.2lf\n", result);
+        printf("Develoved by Adesh Gurung.");
+        printf("Email:adeshawm11@gmail.com");
     }
     return 0;
 }
@@ -78,6 +80,4 @@ int mod(int a, int b) {
     } else {
         return a % b;
     }
-    printf("Develoved by Adesh Gurung.");
-    printf("Email:adeshawm11@gmail.com");
 }
