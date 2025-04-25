@@ -3,7 +3,7 @@
 
 void print_menu();
 double div_func(double, double);
-int mod(int, int);
+double mod(int, int);
 
 int main() {
     int choice;
@@ -13,6 +13,10 @@ int main() {
         scanf("%d", &choice);
         if (choice == 7) {
             break;
+        } 
+        if (choice<1 || choice>7){
+            fprintf(stderr,"Error!! \n You have entered the wrong choice.");
+            continue;
         }
 
         printf("\nPlease enter the first number: ");
@@ -43,8 +47,9 @@ int main() {
                 printf("Invalid choice!\n");
                 continue;
         }
-
+        if(result !=NAN ){
         printf("Result of the operation = %.2lf\n", result);
+        }
         printf("Develoved by Adesh Gurung.\n");
         printf("Email:adeshawm11@gmail.com\n");
     }
@@ -52,6 +57,7 @@ int main() {
 }
 
 void print_menu() {
+    printf("\n----------------------------");
     printf("Welcome to Simple Calculator\n");
     printf("\nChoose an option:\n");
     printf("\n1. Addition");
@@ -73,10 +79,10 @@ double div_func(double a, double b) {
     }
 }
 
-int mod(int a, int b) {
+double mod(int a, int b) {
     if (b == 0) {
         fprintf(stderr, "Error! Modulus by zero.\n");
-        return -1;  
+        return NAN;  
     } else {
         return a % b;
     }
